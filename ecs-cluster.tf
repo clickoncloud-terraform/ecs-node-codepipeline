@@ -64,7 +64,7 @@ DEFINITION
 
 resource "aws_ecs_service" "ecs_service" {
   #depends_on                         = [aws_lb.public]
-  name                               = "ecs-service"
+  name                               = var.task_defination_name
   cluster                            = aws_ecs_cluster.cluster.id
   launch_type                        = "FARGATE"
   deployment_maximum_percent         = "200"

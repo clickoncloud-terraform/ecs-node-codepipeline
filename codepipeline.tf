@@ -260,7 +260,7 @@ resource "aws_codepipeline" "node_app_pipeline" {
 
       configuration = {
         # "PollForSourceChanges" = "false"
-        ConnectionArn    = "arn:aws:codestar-connections:us-east-1:111836646603:connection/7ee728d6-2fce-4330-9945-f98460182e6f"
+        ConnectionArn    = var.Github-Connection
         FullRepositoryId = var.repo_name
         BranchName       = var.branch_name
       }
@@ -342,8 +342,8 @@ resource "aws_codepipeline" "node_app_pipeline" {
       version          = "1"
       run_order        = 1
       configuration = {
-        "ClusterName" = "terraform-cluster"
-        "ServiceName" = "ecs-service"
+        "ClusterName" = var.cluster_name
+        "ServiceName" = var.task_defination_name
         "FileName"    = "imagedefinitions.json"
         #"DeploymentTimeout" = "15"
       }
