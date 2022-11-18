@@ -1,0 +1,8 @@
+Task- 
+1. Create IAM Role for ECS Task
+2. ECS Cluster Create Fargate
+3. Load Balancer & Targer Group & SSL
+4. Upload Certificate infor Certificate Manger
+5. Ecs Service With Load Balancer
+6. Cloud Watch Log Group Create
+7. Collection Data From Existing Infrusture.
