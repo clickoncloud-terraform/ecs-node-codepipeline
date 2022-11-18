@@ -6,3 +6,9 @@ Task-
 5. Ecs Service With Load Balancer
 6. Cloud Watch Log Group Create
 7. Collection Data From Existing Infrusture.
+8. CodeBuild
+9. Code PipeLine
+10. Ecr
+
+git@github.com:clickoncloud-terraform/ecs-node-codepipeline.git
+
