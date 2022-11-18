@@ -21,13 +21,13 @@ variable "task_defination_name" {
 
 #Docker Port Number
 variable "container_port" {
-  type        = number
-  default     = 80
+  type    = number
+  default = 80
 }
 #Docker Images Name
 variable "image_url" {
-  type        = string
-  default     = "nginx"
+  type    = string
+  default = "nginx"
 }
 variable "desired_count" {
   default = 2
@@ -51,18 +51,21 @@ variable "artifacts_bucket_name" {
   default = "soumen-artifacts-codebuild"
 }
 
-#Github branch
-variable "nodejs_project_repository_branch" {
-  default     = "main"
-}
-
-variable "nodejs_project_repository_name" {
-  default     = "nodeapp"
-}
 
 
 #ECR Repo Name
-variable "docker_repo_name" {
+variable "aws_account_id" {
+  default = 111836646603
+}
+
+variable "IMAGE_REPO_NAME" {
   default = "nodeapp"
+}
+
+variable "repo_name" {
+  default = "clickoncloud-terraform/ecs-node-codepipeline"
+}
+variable "branch_name" {
+  default = "main"
   
 }

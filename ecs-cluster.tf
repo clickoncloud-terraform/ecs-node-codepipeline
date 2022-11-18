@@ -69,7 +69,7 @@ resource "aws_ecs_service" "ecs_service" {
   launch_type                        = "FARGATE"
   deployment_maximum_percent         = "200"
   deployment_minimum_healthy_percent = "0"
-  desired_count                      = "${var.desired_count}"
+  desired_count                      = var.desired_count
   network_configuration {
     subnets          = ["${data.aws_subnet.selected1.id}"]
     security_groups  = ["${data.aws_security_groups.single.ids[0]}"]
@@ -83,5 +83,5 @@ resource "aws_ecs_service" "ecs_service" {
     target_group_arn = aws_alb_target_group.main.arn
     container_name   = var.task_defination_name
     container_port   = var.container_port
-  }    
+  }
 }
