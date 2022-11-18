@@ -45,5 +45,24 @@ variable "load_balancer_name" {
 #Mention Here Uploaded Certificate ARN
 variable "alb_tls_cert_arn" {
   default = "arn:aws:acm:us-east-1:111836646603:certificate/ce8a3352-aee1-4cef-b842-04e54d775eed"
+}
+
+variable "artifacts_bucket_name" {
+  default = "soumen-artifacts-codebuild"
+}
+
+#Github branch
+variable "nodejs_project_repository_branch" {
+  default     = "main"
+}
+
+variable "nodejs_project_repository_name" {
+  default     = "nodeapp"
+}
+
+
+#ECR Repo Name
+variable "docker_repo_name" {
+  default = "nodeapp"
   
 }
