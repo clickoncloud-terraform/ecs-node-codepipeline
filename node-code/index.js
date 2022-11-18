@@ -1,12 +1,16 @@
-const http = require('http');
-const port = process.env.PORT || 80;
+'use strict';
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  const msg = 'Hello World Terraform'
-  res.end(msg);
+const express = require('express');
+
+// Constants
+const PORT = 80;
+const HOST = '0.0.0.0';
+
+// App
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Hello World3');
 });
 
-server.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}/`);
-});
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}`);
